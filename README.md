@@ -1,32 +1,32 @@
-Angular Dark Mode based on https://github.com/talohana/angular-dark-mode
+Angular Dark Mode based on https://github.com/talohana/ng-dark-mode
 
 ## Installation
 
-To use angular-dark-mode in your project install it via npm:
+To use ng-dark-mode in your project install it via npm:
 
 ```
-npm i angular-dark-mode
+npm i ng-dark-mode
 ```
 
 or if you are using yarn:
 
 ```
-yarn add angular-dark-mode
+yarn add ng-dark-mode
 ```
 
-and add `angular-dark-mode.js` file to `angular.json` scripts section:
+and add `ng-dark-mode.js` file to `angular.json` scripts section:
 
 ```json
 {
-  "scripts": ["./node_modules/angular-dark-mode/angular-dark-mode.js"]
+  "scripts": ["./node_modules/ng-dark-mode/ng-dark-mode.js"]
 }
 ```
 
-if you are using custom configuration see [angular-dark-mode.js](#angular-dark-mode.js)
+if you are using custom configuration see [ng-dark-mode.js](#ng-dark-mode.js)
 
 ## Usage
 
-In order to use angular-dark-mode you need to inject the service somewhere in your applications - presumably where you hold the dark mode toggle, and get the dark mode value from the exported `darkMode$` Observable:
+In order to use ng-dark-mode you need to inject the service somewhere in your applications - presumably where you hold the dark mode toggle, and get the dark mode value from the exported `darkMode$` Observable:
 
 ```ts
 // dark-mode-toggle.component.ts
@@ -72,7 +72,7 @@ body.light-mode {
 @Component({
   selector: 'app-root',
   template: `
-    <h1>angular-dark-mode</h1>
+    <h1>ng-dark-mode</h1>
     <p>Toggle to see magic happens!</p>
     <app-dark-mode-toggle></app-dark-mode-toggle>
   `,
@@ -85,7 +85,7 @@ Save and run your application, play with the toggle button to change between mod
 
 ## Options
 
-`angular-dark-mode` ships with the following options:
+`ng-dark-mode` ships with the following options:
 
 | Option          |                         Description                          |            Default Value |
 | --------------- | :----------------------------------------------------------: | -----------------------: |
@@ -100,7 +100,7 @@ Save and run your application, play with the toggle button to change between mod
 All options are set to default and can be configured via the `DARK_MODE_OPTIONS` InjectionToken:
 
 ```ts
-import { DARK_MODE_OPTIONS } from 'angular-dark-mode';
+import { DARK_MODE_OPTIONS } from 'ng-dark-mode';
 
 @NgModule({
     ...
@@ -118,16 +118,16 @@ import { DARK_MODE_OPTIONS } from 'angular-dark-mode';
 export class AppModule {}
 ```
 
-## angular-dark-mode.js
+## ng-dark-mode.js
 
 This file has multiple purposes:
 
 1. Persistence - retrieve previous dark mode state from `localStorage` if empty falls back to [`(prefers-color-scheme: dark)` media query](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-color-scheme)
 2. Preloading - set a `preloadingClass` to `document.body` which can be used to prevent initial transitioning
 
-If you are using the default configurations, adding the `angular-dark-mode.js` file bundled with this library is enough.
+If you are using the default configurations, adding the `ng-dark-mode.js` file bundled with this library is enough.
 
-In any other case, copy `angular-dark-mode.js` locally, make the necessary changes and load it instead of the bundled one.
+In any other case, copy `ng-dark-mode.js` locally, make the necessary changes and load it instead of the bundled one.
 
 ### Transitioning
 
@@ -140,25 +140,3 @@ It is often useful to transition the changes between dark and light modes, and m
 body:not(.dark-mode-preloading) {
   transition: all 0.3s linear;
 }
-
-...
-```
-
-## Contributors
-
-Thanks goes to these wonderful people [emoji key](https://allcontributors.org/docs/en/emoji-key):
-
-<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
-<!-- prettier-ignore-start -->
-<!-- markdownlint-disable -->
-<table>
-  <tr>
-    <td align="center"><a href="https://talohana.com/"><img src="https://avatars.githubusercontent.com/u/24203431?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Tal Ohana</b></sub></a><br /><a href="https://github.com/TalOhana/angular-dark-mode/commits?author=talohana" title="Code">💻</a> <a href="https://github.com/TalOhana/angular-dark-mode/commits?author=talohana" title="Documentation">📖</a> <a href="#maintenance-talohana" title="Maintenance">🚧</a></td>
-    <td align="center"><a href="https://github.com/Guysh9"><img src="https://avatars.githubusercontent.com/u/75510227?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Guy Shemesh</b></sub></a><br /><a href="#design-Guysh9" title="Design">🎨</a></td>
-  </tr>
-</table>
-
-<!-- markdownlint-restore -->
-<!-- prettier-ignore-end -->
-
-<!-- ALL-CONTRIBUTORS-LIST:END -->
