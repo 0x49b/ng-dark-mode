@@ -1,0 +1,32 @@
+{
+  "name": "ng-dark-mode",
+  "description": "Add dark mode to your Angular applications with ease!",
+  "version": "0.0.0-development",
+  "license": "MIT",
+  "keywords": [
+    "angular",
+    "angular 2",
+    "dark mode",
+    "dark theme",
+    "dark"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/max-havelaar/ng-dark-mode"
+  },
+  "author": {
+    "name": "Florian Thiévent",
+    "email": "mail@example.com",
+    "url": "https://github.com/max-havelaar"
+  },
+  "peerDependencies": {
+    "@angular/common": "^13.3.12",
+    "@angular/core": "^13.3.12"
+  },
+  "dependencies": {
+    "tslib": "^2.0.0"
+  }
+}

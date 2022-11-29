@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { DarkModeService } from 'angular-dark-mode';
+import { DarkModeService } from 'ng-dark-mode';
 import { Observable } from 'rxjs';
 
 @Component({

@@ -4,7 +4,7 @@ import { Component } from '@angular/core';
   selector: 'app-root',
   template: `
     <div class="container">
-      <h1>angular-dark-mode</h1>
+      <h1>ng-dark-mode</h1>
       <p>Toggle to see magic happens!</p>
       <div>
         <app-dark-mode-toggle> </app-dark-mode-toggle>

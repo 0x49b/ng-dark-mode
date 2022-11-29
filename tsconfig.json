@@ -14,7 +14,7 @@
     "module": "es2020",
     "lib": ["es2018", "dom"],
     "paths": {
-      "angular-dark-mode": ["./projects/angular-dark-mode/src/public-api.ts"]
+      "ng-dark-mode": ["./projects/ng-dark-mode/src/public-api.ts"]
     }
   }
 }
